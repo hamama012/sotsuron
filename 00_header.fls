@@ -1,0 +1,6 @@
+PWD /Volumes/semi2015/05_卒論資料/卒論TEXテンプレート
+INPUT /usr/local/texlive/2015basic/texmf.cnf
+INPUT /usr/local/texlive/2015basic/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2015basic/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT 00_header.tex
+OUTPUT 00_header.log

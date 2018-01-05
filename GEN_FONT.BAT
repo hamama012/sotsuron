@@ -1,0 +1,1 @@
+C:\w32tex\bin\mktexpk.exe --dpi 329 --bdpi 300 --mag 1+29/300 cmbx10C:\w32tex\bin\mktexpk.exe --dpi 329 --bdpi 300 --mag 1+29/300 cmr10C:\w32tex\bin\mktexpk.exe --dpi 329 --bdpi 300 --mag 1+29/300 cmmi10

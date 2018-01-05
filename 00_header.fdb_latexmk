@@ -1,0 +1,10 @@
+# Fdb version 3
+["pdflatex"] 1451032971 "00_header.tex" "00_header.pdf" "00_header" 1451032971
+  "/usr/local/texlive/2015basic/texmf-dist/web2c/texmf.cnf" 1445297872 31985 3b2aa1e4e73426e2011ec5231ac92e0f ""
+  "/usr/local/texlive/2015basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1451030260 2499809 b7146411450fb8c729b1eb0200655811 ""
+  "/usr/local/texlive/2015basic/texmf.cnf" 1432478332 628 096f87b1123b576e7bac81e7554a490e ""
+  "00_header.aux" 1451033599 8 a94a2480d3289e625eea47cd1b285758 ""
+  "00_header.tex" 1450336827 840 b3984beb5d099cf1b6049923a4a2a5df ""
+  (generated)
+  "00_header.log"
+  "00_header.pdf"

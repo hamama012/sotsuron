@@ -1,0 +1,82 @@
+﻿%付録
+%ソースコードを付ける場合は，verbatim 環境で囲む．
+%verbatim 環境は場合によっては，自動階行されないかもしれない．
+%改行されないときは，自分で適度なところで区切ってください．
+
+\appendix
+\chapter{コルーチン処理によるUnity-chanの発生}
+
+\begin{verbatim}
+using UnityEngine;
+using System.Collections;
+
+public class hassei: MonoBehaviour
+{
+
+    public GameObject cube;
+
+    void Start()
+    {
+        StartCoroutine("Sample");
+    }
+
+    IEnumerator Sample()
+    {
+        yield return new WaitForSeconds(1.0f);
+        for (int i = 1; i < 10; i++)
+        {
+            yield return new WaitForSeconds(1.0f);
+            if (i == 3)
+            {
+                float x = Random.Range(0.0f, 1.0f);
+                float y = Random.Range(0.0f, 0.0f);
+                float z = Random.Range(0.0f, 50.0f);
+                Instantiate(cube, new Vector3(x, y, z), Quaternion.identity);
+            }
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+    }
+}
+\end{verbatim}
+
+\chapter{NavMeshに従い目的地に移動する}
+
+\begin{verbatim}
+using UnityEngine;
+using System.Collections;
+
+public class hassei: MonoBehaviour
+{
+
+    public GameObject cube;
+
+    void Start()
+    {
+        StartCoroutine("Sample");
+    }
+
+    IEnumerator Sample()
+    {
+        yield return new WaitForSeconds(1.0f);
+        for (int i = 1; i < 10; i++)
+        {
+            yield return new WaitForSeconds(1.0f);
+            if (i == 3)
+            {
+                float x = Random.Range(0.0f, 1.0f);
+                float y = Random.Range(0.0f, 0.0f);
+                float z = Random.Range(0.0f, 50.0f);
+                Instantiate(cube, new Vector3(x, y, z), Quaternion.identity);
+            }
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+    }
+}
+\end{verbatim}
+
