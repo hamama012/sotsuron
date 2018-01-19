@@ -6,8 +6,8 @@
 \contentsline {chapter}{\numberline {第2章}利用技術}{3}
 \contentsline {section}{\numberline {2.1}Unity}{3}
 \contentsline {section}{\numberline {2.2}HTC Vive}{3}
-\contentsline {section}{\numberline {2.3}Maya}{3}
-\contentsline {section}{\numberline {2.4}Visual Studio}{3}
+\contentsline {section}{\numberline {2.3}Maya}{4}
+\contentsline {section}{\numberline {2.4}Visual Studio}{4}
 \contentsline {chapter}{\numberline {第3章}先行研究}{5}
 \contentsline {section}{\numberline {3.1}概要}{5}
 \contentsline {section}{\numberline {3.2}問題点}{7}
