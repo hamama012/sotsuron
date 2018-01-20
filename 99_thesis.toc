@@ -24,7 +24,7 @@
 \contentsline {section}{\numberline {5.3}実験方法}{12}
 \contentsline {section}{\numberline {5.4}アンケート}{12}
 \contentsline {section}{\numberline {5.5}実験結果}{12}
-\contentsline {chapter}{\numberline {第6章}結果と考察}{13}
-\contentsline {section}{\numberline {6.1}結果}{13}
-\contentsline {section}{\numberline {6.2}考察}{13}
-\contentsline {section}{\numberline {6.3}今後の課題}{13}
+\contentsline {chapter}{\numberline {第6章}結果と考察}{14}
+\contentsline {section}{\numberline {6.1}結果}{14}
+\contentsline {section}{\numberline {6.2}考察}{14}
+\contentsline {section}{\numberline {6.3}今後の課題}{14}
