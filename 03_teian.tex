@@ -25,13 +25,6 @@
 システムを起動すると、ペットが自由に動き回る待機状態から開始する。ユーザがトリガーを深く引くと、ペットはユーザの位置まで移動し、ユーザの手前で停止する。この状態を触れ合い可能状態と呼ぶ。触れ合い可能状態では、ペットに触れることが可能になる。
 この状態で再度トリガーを深く引くと、ペットは待機状態へと戻りフィールド内を自由に歩き回るようになる。
 
-\begin{figure}[H]
-\centering
-\includegraphics*[width=16cm,clip]{images/chart1.eps}
-\caption{ペットの動作のフローチャート}
-\label{fig:chart1}
-\end{figure} 
-
 \subsection{仮想空間}
 
 仮想空間の構築にはUnityを使用した。仮想空間を構成するオブジェクトの一覧を表\ref{table:objectList}に示す。
@@ -47,16 +40,21 @@
 \hline
 Directional light	& ライト \\
 Pet				& ペットアバター \\
-CameraRig		& カメラ（子オブジェクトにユーザアバターを含む） \\
+CameraRig		& カメラのプレハブ \\
 BackGround		& 背景オブジェクト\\
 FaceComplition	& ペットアバターの視線補完オブジェクト \\
-SteamVR		& SteamVRプラグイン\\
+SteamVR		& SteamVRのプレハブ\\
 \hline 
 \end{tabular}}
 \end{table}
 
-BackGroundオブジェクトには環境を構成するオブジェクトを全て格納している。
-木や草といったオブジェクトはUnityのアセットストアで入手したNature Starter Kit 2を使用した。
+Petはペットアバターである。詳細は口述するペット管理部で述べる。
+CameraRigはSteamVRプラグイン内にあるCameraRigプレハブのインスタンスであり、これをメインカメラとして用いる。プレハブとはGameObjectのコンポーネントとプロパティ全てを格納するテンプレートで、インスタンスを複数作成することが可能である。
+SteamVRも同様に、SteamVRプラグイン内にあるSteamVRプレハブのインスタンスである。トラッキングスペースはデフォルトでTracking Universe Standing（ルームスケール）になっているが、本研究では着席状態で使用するため、Tracking Universe Seated（着席モード）に指定しCameraRigをプレイヤーの頭が来るであろう位置に配置した。
+CameraRigの子オブジェクトとしてControllerがあり、本研究では右手で持つコントローラを示すController(right)のみを利用する。Controller及びその子オブジェクトであるhandを使用してユーザの動作を制御する。詳細は後述するユーザ管理部で述べる。
+
+BackGroundにはライトを除いた環境を構成するオブジェクトを全て格納している。
+木や草といったオブジェクトはUnityのアセットストアで入手したNature Starter Kit 2を使用して配置した
 更に、風を吹かせることができるWindZoneオブジェクトを配置することで、木の葉や草が揺らすように表現した。
 環境音は木々のざわめきと鳥のさえずりの二種類を用意し、音量を調整した上で同時に再生した。音はループ再生する。
 
@@ -69,7 +67,7 @@ BackGroundオブジェクトには環境を構成するオブジェクトを全て格納している。
 
 \subsection{ユーザ}
 
-仮想空間に置かれるユーザのアバターは手部分のみである。HTC Viveのコントローラにはコントローラの3DCGモデルが標準で用意されているが、現実感の付与を目的とした本研究ではコントローラよりも人間の手のモデルを使用した方が自然である。よって、Mayaを用いて手の3DCGを作成し、コントローラモデルの代わりに使用する。
+仮想空間に置かれるユーザのアバターは手部分のみである。HTC Viveのコントローラにはコントローラの3DCGモデルが標準で用意されているが、現実感の付与を目的とした本研究ではコントローラよりも人間の手のモデルを使用した方が自然である。そのためMayaを用いて手の3DCGを作成し、Unityへエクスポートした。コントローラモデルの代わりに使用する。
 
 \begin{figure}[H]
 \centering
@@ -80,7 +78,7 @@ BackGroundオブジェクトには環境を構成するオブジェクトを全て格納している。
 
 \subsection{バーチャルペット}
 
-本研究では先行研究のバーチャルペットは使用せず、新しく柴犬を参考にMayaを用いて3DCGモデルを作成、使用した。待機、歩く、走る、尻尾を振るの４種類のアニメーションが可能である。
+本研究では先行研究のバーチャルペットは使用せず、新しく柴犬を参考にMayaを用いて3DCGモデルを作成、Unityへエクスポートした。待機、歩く、走る、尻尾を振るの４種類のアニメーションが可能である。
 
 \begin{figure}[H]
 \centering
@@ -127,6 +125,14 @@ FaceComplitionの初期位置はカメラで、これに追従して動く。ユーザとペットが衝突する
 FaceComplitionがユーザアバターに衝突すると、視線先ターゲットをユーザアバターに変更する。
 ユーザアバターがペットから衝突離脱して一定フレーム以内に再度衝突を検知しなかったとき、視線先ターゲットをFaceComplitionに変更し、FaceComplitionはカメラの位置へと移動を開始する。
 FaceComplitionがカメラと衝突すると視線先ターゲットをカメラに変更する。
+ペットの動作のフローチャートを\ref{fig:chart1}に示す。
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=16cm,clip]{images/chart1.eps}
+\caption{ペットの動作のフローチャート}
+\label{fig:chart1}
+\end{figure} 
 
 
 %https://research.miyashita.com/2017/D174/D174.pdf
