@@ -1,179 +1,188 @@
-\chapter{��Ď�@}
-�{�͂ł́C�{�����ŊJ������o�[�`�����y�b�g�ɂ��ďq�ׂ�D
+﻿\chapter{提案手法}
+本章では，本研究で開発するバーチャルペットについて述べる．
 
-\section{�T�v}
+\section{概要}
 
-%�X�ɁA�R���g���[���̐U���@�\�𗘗p���A���[�U�ƃo�[�`�����y�b�g���ڐG�����ۂɐU�����N�������ƂŁA�G�o�Č��Ƃ܂ł͂������Ƃ��G�����Ƃ������o�����[�U�ɕԂ����Ƃ��ł���B
+%更に，コントローラの振動機能を利用し，ユーザとバーチャルペットが接触した際に振動を起こすことで，触覚再現とまではいかずとも触ったという感覚をユーザに返すことができる．
 
-%�܂��AHMD�𗘗p����ƃ��[�U�̎��E���猻���̕�������Ւf����邱�Ƃ���A���z��ԓ��̊������[�U�ɑ傫�ȉe����^���邱�Ƃ����������B�����VR�𗘗p����o�[�`�����y�b�g�݂̂ɔ�����������ł���A�Z���s�[���ʂɊ֘A���邱�Ƃ��l������B���̉��z��ԓ��̊��͊J�������C�ӂɕύX�ł��邱�Ƃ���A���z��Ԃ̎��R���Ƃ��čl����B
+%また，HMDを利用するとユーザの視界から現実の物や環境が遮断されることから，仮想空間内の環境もユーザに大きな影響を与えることが推測される．これはVRを利用するバーチャルペットのみに発生する特性であり，セラピー効果に関連することが考えられる．この仮想空間内の環境は開発側が任意に変更できることから，仮想空間の自由性として考える．
 
-�{�����̃V�X�e���\���}��}\ref{fig:design1}�Ɏ����B
-�{�V�X�e����HMD�A�R���g���[���A�w�b�h�z�����琬��f�o�C�X����Unity�ɂ����������y�b�g�V�X�e��������\�������B
+本研究のシステム構成図を図\ref{fig:design1}に示す．
+本システムはHMD，コントローラ，イヤホンから成るデバイス部とUnityにより実装したペットシステム部から構成される．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=15cm,clip]{images/design1.eps}
-\caption{��ăV�X�e���̍\��}
+\caption{提案システムの構成}
 \label{fig:design1}
 \end{figure}
 
-���[�U��HMD�A�C���z���𑕒����A�R���g���[������Ɏ�������Ԃŉ��z��Ԃɖv������B
-���z��Ԃɂ̓y�b�g�ƃ��[�U�̂Q�̃A�o�^�[�ƁA���I�u�W�F�N�g�����݂���B���[�U�̓����̕�����HMD�ɁA��̓����̓R���g���[���ɂ���ăg���b�L���O����A���z��ԏ�ɔ��f�����B�R���g���[���̓g���K�[�������̓{�^�������͂����΁A���̏������[�U�Ǘ��v���O�����ւƓn���B
-���[�U�A�o�^�[���y�b�g�A�o�^�[�Ƃ̏Փ˂����m����ƁA���[�U�Ǘ��v���O�����ƃy�b�g�Ǘ��v���O�����ւ��ꂼ��Փˏ�񂪓n�����B���[�U�Ǘ��v���O��������̓R���g���[���֐U�����߂��o����A�R���g���[�����U�����邱�ƂŃ��[�U�ɐڐG�t�B�[�h�o�b�N���N�����B
-�y�b�g�Ǘ��v���O�����̓y�b�g�A�o�^�[�̃A�j���[�V�����̂P�ł���K����U�铮��̍Đ����s���A��т�\������B
+ユーザはHMD，イヤホンを装着し，コントローラを手に持った状態で仮想空間に没入する．
+仮想空間にはペットとユーザの２つのアバターと，環境オブジェクトが存在する．ユーザの頭部の方向はHMDに，手の動きはコントローラによってトラッキングされ，仮想空間上に反映される．コントローラはトリガーもしくはボタンが入力されれば，その情報をユーザ管理プログラムへと渡す．
+ユーザアバターがペットアバターとの衝突を検知すると，ユーザ管理プログラムとペット管理プログラムへそれぞれ衝突情報が渡される．ユーザ管理プログラムからはコントローラへ振動命令が出され，コントローラが振動することでユーザに接触フィードバックを起こす．
+ペット管理プログラムはペットアバターのアニメーションの１つである尻尾を振る動作の再生を行い，喜びを表現する．
 
-�V�X�e�����N������ƁA�y�b�g�����R�ɓ������ҋ@��Ԃ���J�n����B���[�U���g���K�[��[�������ƁA�y�b�g�̓��[�U�̈ʒu�܂ňړ����A���[�U�̎�O�Œ�~����B���̏�Ԃ�G�ꍇ���\��ԂƌĂԁB�G�ꍇ���\��Ԃł́A�y�b�g�ɐG��邱�Ƃ��\�ɂȂ�B
-���̏�Ԃōēx�g���K�[��[�������ƁA�y�b�g�͑ҋ@��ԂւƖ߂�t�B�[���h�������R�ɕ������悤�ɂȂ�B
+システムを起動すると，ペットが自由に動き回る待機状態から開始する．ユーザがトリガーを深く引くと，ペットはユーザの位置まで移動し，ユーザの手前で停止する．この状態を触れ合い可能状態と呼ぶ．触れ合い可能状態では，ペットに触れることが可能になる．
+この状態で再度トリガーを深く引くと，ペットは待機状態へと戻りフィールド内を自由に歩き回るようになる．
+システムのスクリーンショットを図に示す．
 
-\subsection{���z���}
+\subsection{仮想空間}
 
-���z��Ԃ̍\�z�ɂ�Unity���g�p�����B���z��Ԃ̓��[�U���A�y�b�g���A���I�u�W�F�N�g���琬��B
-���̐݌v��}\ref{fig:design2}�Ɏ����B
+仮想空間の構築にはUnityを使用した．仮想空間はユーザ部，ペット部，環境オブジェクトから成る．
+この設計を図\ref{fig:design2}に示す．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=15cm,clip]{images/design2.eps}
-\caption{���z��Ԃ̏ڍא݌v}
+\caption{仮想空間の詳細設計}
 \label{fig:design2}
 \end{figure} 
 
-���[�U���̓J�����A���[�U�A�o�^�[�̂Q�̃I�u�W�F�N�g�ɂ��\�������B
-�J������HMD���烆�[�U�̓����̈ʒu�����擾���A���̓�������z��Ԃɔ��f����B
-���[�U�A�o�^�[�̓R���g���[������ʒu�����擾���A�J�����Ɠ��l�ɂ��̓�������z��Ԃɔ��f����B
-�y�b�g���̓y�b�g�A�o�^�[�A�����⊮�I�u�W�F�N�g�̂Q�̃I�u�W�F�N�g�ɂ��\�������B
-�y�b�g�A�o�^�[�̓y�b�g�Ǘ����Ɉʒu���A�Փˏ��Ƃ��������z��Ԃɂ�����A�o�^�[�̏󋵂�n���A���̏󋵂ɉ������s���������󂯉��z��ԏ�œ��삷��B
-�����⊮�I�u�W�F�N�g�̓y�b�g�̎����ړ������R�ɍs�����߂ɗp�ӂ��ꂽ�I�u�W�F�N�g�ł���B
-�y�b�g�A�o�^�[�Ɠ��l�ɁA�y�b�g�Ǘ����Ɉʒu���A�Փˏ��Ƃ��������z��Ԃɂ�����A�o�^�[�̏󋵂�n���A���̏󋵂ɉ������s���������󂯉��z��ԏ�œ��삷��B
+ユーザ部はカメラ，ユーザアバターの２つのオブジェクトにより構成される．
+カメラはHMDからユーザの頭部の位置情報を取得し，その動作を仮想空間に反映する．
+ユーザアバターはコントローラから位置情報を取得し，カメラと同様にその動作を仮想空間に反映する．
+ペット部はペットアバター，視線補完オブジェクトの２つのオブジェクトにより構成される．
+ペットアバターはペット管理部に位置情報，衝突情報といった仮想空間におけるアバターの状況を渡し，その状況に応じた行動処理を受け仮想空間上で動作する．
+視線補完オブジェクトはペットの視線移動を自然に行うために用意されたオブジェクトである．
+ペットアバターと同様に，ペット管理部に位置情報，衝突情報といった仮想空間におけるアバターの状況を渡し，その状況に応じた行動処理を受け仮想空間上で動作する．
 
-���I�u�W�F�N�g�͊����\�z����S�ẴI�u�W�F�N�g���i�[����B
-�؂⑐�Ȃǂ̃I�u�W�F�N�g��Unity�̃A�Z�b�g�X�g�A�œ��肵��Nature Starter Kit 2���g�p���Ĕz�u�����B
-�X�ɁA���𐁂����邱�Ƃ��ł���WindZone�I�u�W�F�N�g��z�u���邱�ƂŁA�؂̗t�⑐���h�炷�悤�ɕ\�������B
-�����͖؁X�̂���߂��ƒ��̂�������̓��ނ�p�ӂ��A���ʂ𒲐�������œ����ɍĐ������B���̓��[�v�Đ�����B
+環境オブジェクトは環境を構築する全てのオブジェクトを格納する．
+木や草などのオブジェクトはUnityのアセットストアで入手したNature Starter Kit 2を使用して配置した．
+更に，風を吹かせることができるWindZoneオブジェクトを配置することで，木の葉や草が揺らすように表現した．
+環境音は木々のざわめきと鳥のさえずりの二種類を用意し，音量を調整した上で同時に再生した．音はループ再生する．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=15cm,clip]{images/sc8.eps}
-\caption{���z���}
+\caption{仮想空間}
 \label{fig:vr}
 \end{figure} 
 
-\subsection{���[�U}
+\subsection{ユーザ}
 
-���z��Ԃɒu����郆�[�U�̃A�o�^�[�͎蕔���݂̂ł���BHMD�̃R���g���[���ɂ̓R���g���[����3DCG���f�����W���ŗp�ӂ���Ă��邪�A�������̕t�^��ړI�Ƃ����{�����ł̓R���g���[�������l�Ԃ̎�̃��f�����g�p�����������R�ł���B���̂���Maya��p���Ď��3DCG���쐬���AUnity�փG�N�X�|�[�g�����B�R���g���[�����f���̑���Ɏg�p����B�R���C�_�[�̓A�Z�b�g�X�g�A������肵��SABoneColider���g�p���ĉ\�Ȍ��萸���Ȃ��̂��쐬�����B
+仮想空間に置かれるユーザのアバターは手部分のみである．HMDのコントローラにはコントローラの3DCGモデルが標準で用意されているが，現実感の付与を目的とした本研究ではコントローラよりも人間の手のモデルを使用した方が自然である．そのためMayaを用いて手の3DCGを作成し，Unityへエクスポートした．コントローラモデルの代わりに使用する．物理衝突による処理を行うため，コライダーと呼ばれるコンポーネントを用いて物理衝突のためのオブジェクト形状を定義する．
+ユーザアバターのコライダーはアセットストアから入手したSAColliderBuilderを使用して可能な限り精密なものを作成した．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=15cm,clip]{images/hand.eps}
-\caption{���[�U�A�o�^�[}
+\caption{ユーザアバター}
 \label{fig:hand}
 \end{figure} 
 
-\subsection{�o�[�`�����y�b�g}
+\subsection{バーチャルペット}
 
-�{�����ł͐�s�����̃o�[�`�����y�b�g�͎g�p�����A�V�����Č����Q�l��Maya��p����3DCG���f�����쐬�AUnity�փG�N�X�|�[�g�����B�ҋ@�A�����A����A�K����U��̂S��ނ̃A�j���[�V�������\�ł���B�R���C�_�[�̓��[�U�A�o�^�[�Ɠ��l�ɁA�A�Z�b�g�X�g�A������肵��SABoneColider���g�p���ĉ\�Ȍ��萸���Ȃ��̂��쐬�����B
+本研究では先行研究のバーチャルペットは使用せず，新しく柴犬を参考にMayaを用いて3DCGモデルを作成，Unityへエクスポートした．待機，歩く，走る，尻尾を振るの４種類のアニメーションが可能である．コライダーはユーザアバターと同様に，アセットストアから入手したSAColliderBuilderを使用して可能な限り精密なものを作成した．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=15cm,clip]{images/pet.eps}
-\caption{�o�[�`�����y�b�g�̃A�o�^�[}
+\caption{バーチャルペットのアバター}
 \label{fig:pet}
 \end{figure} 
 
-\section{���[�U�Ǘ���}
+\section{ユーザ管理部}
 
-���[�U�Ǘ�����PlayerController��HandController�̂Q�̃X�N���v�g�ɂ���č\�������B
-���̐݌v��}\ref{fig:design3}�Ɏ����B
+ユーザ管理部はPlayerControllerとHandControllerの２つのスクリプトによって構成される．
+この設計を図\ref{fig:design3}に示す．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=15cm,clip]{images/design3.eps}
-\caption{��ăV�X�e���̍\��}
+\caption{ユーザ管理部の詳細設計}
 \label{fig:design3}
 \end{figure}
 
-PlayerController�̓R���g���[���̃{�^�����͂ɑ΂��A�e�{�^���̓��͂ɉ��������쏈�����s���B
-�R���g���[���̃g���K�[���[���������ƁA���J�̌��ʉ���炵�I������N���X�ϐ��̑�����s���B���̃N���X�ϐ��̒l�ɉ����ăy�b�g�Ǘ��v���O�����̓y�b�g�̓��쏈�������s����B
-�R���g���[���̃��j���[�{�^���������ꂽ�ꍇ��HMD�̈ʒu�������ʒu�ւƃ��Z�b�g���A�O���b�v�{�^���������ꂽ�ꍇ�̓V�[����؂�ւ���B���̃V�[���̐؂�ւ��͌�q��������Ŏg�p����B
-�ȏ�̃R���g���[���̓��͂�\\ref{table:userList}�Ɏ����B
+PlayerControllerはコントローラのボタン入力に対し，各ボタンの入力に応じた動作処理を行う．
+コントローラのトリガーが深く引かれると，口笛の効果音を鳴らし終えた後クラス変数の代入を行う．このクラス変数の値に応じてペット管理プログラムはペットの動作処理を実行する．
+コントローラのメニューボタンが押された場合はHMDの位置を初期位置へとリセットし，グリップボタンを押された場合はシーンを切り替える．このシーンの切り替えは後述する実験で使用する．
+以上のコントローラの入力を表\ref{table:userList}に示す．
 
 \begin{table}[H]
 \centering
-\caption{�R���g���[���̓��͈ꗗ}
+\caption{コントローラの入力一覧}
 \label{table:userList}
 \scalebox{1.00}{
 \begin{tabular}{|c||c|l|c|l|}
 \hline
-���� &�@���� \\
+入力 &　動作 \\
 \hline
-�g���K�[��[������ & �ҋ@��Ԃ������͐G�ꍇ���\��Ԃւ̑J�� \\
-���j���[�{�^�������� & ���Ȉʒu�̃��Z�b�g \\
-�O���b�v�{�^�������� & �V�[���̐؂�ւ� \\
+トリガーを深く引く & 待機状態もしくは触れ合い可能状態への遷移 \\
+メニューボタンを押す & 着席位置のリセット \\
+グリップボタンを押す & シーンの切り替え \\
 \hline 
 \end{tabular}}
 \end{table}
 
-HMD�y�уR���g���[���̈ʒu����SteamVR�v���O�C���𗘗p���Ď擾���A�e�{�^���̓��͂ɉ��������쏈����PlayerController�ōs���B
-�R���g���[���̃g���K�[���[���������ƁA���J�̌��ʉ���炵�I������N���X�ϐ��̑�����s���B���̃N���X�ϐ��̒l�ɉ����ăy�b�g�Ǘ��v���O�����̓y�b�g�̓��쏈�������s����B
-�R���g���[���̃��j���[�{�^���������ꂽ�ꍇ��HMD�̒��Ȉʒu�����Z�b�g���A�O���b�v�{�^���������ꂽ�ꍇ�̓V�[����؂�ւ���B���̃V�[���̐؂�ւ��͌�q��������Ŏg�p����B
-HandController�̓��[�U�A�o�^�[�ɃA�^�b�`����Ă���A�y�b�g�A�o�^�[�ƏՓ˂���Ƃ��̏���e�I�u�W�F�N�g�ɃA�^�b�`����Ă���PlayerController�ɓn���B
-�Փˏ����󂯎����PlayerController�́A�R���g���[���ɐU�����߂��o���BHMD�̃R���g���[���̐U���̒l�͍ő�3999�܂Őݒ肪�\�����A�{�����őz�肷��y�b�g�ɐG���Ƃ�������ɂ����ċ����U���͍D�܂����Ȃ��B
-����āA�l�����m�ł�����x�̎ア�U�������ߒl��200�Ŏ��������B
+HMD及びコントローラの位置情報をSteamVRプラグインを利用して取得し，各ボタンの入力に応じた動作処理はPlayerControllerで行う．
+コントローラのトリガーが深く引かれると，口笛の効果音を鳴らし終えた後クラス変数の代入を行う．このクラス変数の値に応じてペット管理プログラムはペットの動作処理を実行する．
+コントローラのメニューボタンが押された場合はHMDの着席位置をリセットし，グリップボタンを押された場合はシーンを切り替える．このシーンの切り替えは後述する実験で使用する．
+HandControllerはユーザアバターにアタッチされており，ペットアバターと衝突するとその情報を親オブジェクトにアタッチされているPlayerControllerに渡す．
+衝突情報を受け取ったPlayerControllerは，コントローラに振動命令を出す．HMDのコントローラの振動の値は最大3999まで設定が可能だが，本研究で想定するペットに触れるという動作において強い振動は好ましくない．
+よって，人が感知できる程度の弱い振動を求め値を200で実装した．
 
-\section{�y�b�g�Ǘ���}
+\section{ペット管理部}
 
-�y�b�g�Ǘ�����PetController�AMovePet�AHeadLookController�ADirectionManager�̂S�̃X�N���v�g�ɂ���č\�������B
-���̐݌v��}\ref{fig:design4}�Ɏ����B
+ペット管理部はPetController，MovePet，HeadLookController，DirectionManagerの４つのスクリプトによって構成される．
+この設計を図\ref{fig:design4}に示す．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=15cm,clip]{images/design4.eps}
-\caption{��ăV�X�e���̍\��}
+\caption{ペット管理部の詳細設計}
 \label{fig:design4}
 \end{figure}
 
-PetController�͎�Ƀy�b�g�̐G�ꍇ���\��Ԃɂ����铮�쏈�����s���X�N���v�g�ł���B
-�V�X�e���͋N�����ҋ@��ԂŊJ�n���邪�A�R���g���[���g���K�[���[����������PlayerController���ϐ���������B���̕ϐ����Q�Ƃ��APetController�͐G�ꍇ���\��Ԃւ̈ڍs���J�n����B
-�G�ꍇ���\��Ԃֈڍs����ɂ�����A�ҋ@��Ԃ̓���𐧌䂷��MovePet�X�N���v�g���~���A����Ɏ�������𐧌䂷��HeadLookController�X�N���v�g�̓�����J�n����B
-���J����I����ƁA�y�b�g�A�o�^�[�͑���A�j���[�V�������Đ�����Ƌ��Ƀ��[�U�̈ʒu�ւƈړ����J�n���A���[�U�̎�O�Œ�~����B
-���̂Ƃ����R�ȓ��삪�s����悤�ɉ�]�ł͋��ʐ��`�⊮���s��Slerp�֐���p���ċL�q�����B
-���̏�Ԃōēx�g���K�[���[���������ƁAMovePet�X�N���v�g���N������Ƌ���HeadLookController�X�N���v�g���~���A�ҋ@��ԂւƖ߂�B
-���[�U�A�o�^�[�ƏՓ˂���ƁA�K����U��A�j���[�V�������Đ����A�������ύX����Ƌ��ɏՓ˃J�E���g���n�߂�B
-�Փ˃J�E���g�͏����l0�ŁA�Փˌ�1�t���[�����Ƃ�1�������A��萔�𒴂����0�ւƃ��Z�b�g�����B���̊ԁA�y�b�g�A�o�^�[�͏Փˏ������s��Ȃ��B�ēx�Փ˂���Ƃ܂��J�E���g���J�n����B
-�Փ˂��痣�E�A���Ȃ킿���[�U�A�o�^�[���y�b�g�A�o�^�[���痣�ꂽ�Ƃ��A���E�J�E���g���J�n����B
-���E�J�E���g�͏����l0�ŁA�Փˌ�1�t���[�����Ƃ�1�������A��萔�𒴂����0�ւƃ��Z�b�g�����B���̊ԁA�y�b�g�A�o�^�[�ɍēx�Փ˂��Ă�0�Ƀ��Z�b�g�����B
-80�𒴂����Ƃ��A�K����U�铮����~����Ƌ��Ɏ�����^�[�Q�b�g��ύX����B
+PetControllerは主にペットの触れ合い可能状態における動作処理を行うスクリプトである．
+システムは起動時待機状態で開始するが，コントローラトリガーが深く引かれるとPlayerControllerが変数を代入する．この変数を参照し，PetControllerは触れ合い可能状態への移行を開始する．
+触れ合い可能状態へ移行するにあたり，待機状態の動作を制御するMovePetスクリプトを停止し，代わりに視線動作を制御するHeadLookControllerスクリプトの動作を開始する．
+口笛が鳴り終えると，ペットアバターは走るアニメーションを再生すると共にユーザの位置へと移動を開始し，ユーザの手前で停止する．
+このとき自然な動作が行えるように回転では球面線形補完を行うSlerp関数を用いて記述した．
+この状態で再度トリガーが深く引かれると，MovePetスクリプトを起動すると共にHeadLookControllerスクリプトを停止し，待機状態へと戻る．
+ユーザアバターと衝突すると，尻尾を振るアニメーションを再生し，視線先を変更すると共に衝突カウントを始める．
+衝突カウントは初期値0で，衝突後1フレームごとに1増加し，一定数を超えると0へとリセットされる．この間，ペットアバターは衝突時の処理を行わない．再度衝突するとまたカウントを開始する．
+衝突から離脱，すなわちユーザアバターがペットアバターから離れたとき，離脱カウントが開始する．
+離脱カウントは初期値0で，衝突後1フレームごとに1増加し，一定数を超えると0へとリセットされる．この間，ペットアバターに再度衝突しても0にリセットされる．
+一定数を超えたとき，尻尾を振る動作を停止すると共に視線先ターゲットを変更する．
 
-MovePet�͑ҋ@��Ԃ̓��쏈�����s���X�N���v�g�ł���B
-�ڕW�ʒu��ݒ肵�A���̈ʒu�Ɍ������ăy�b�g�A�o�^�[�̈ړ����s���B
-��苗���ړ�����ƖڕW�ʒu��ݒ肵�����A���̐V�����ݒ肵���ڕW�ʒu�ւƈړ�����B
-���̓����ҋ@��Ԃ̊ԌJ��ւ����B
-�O�q�����悤�ɁA���̃X�N���v�g�͐G�ꍇ���\��Ԃֈڍs����ۂ�PetController�ɂ���Ē�~���A�ҋ@��Ԃֈڍs����ۂɋN������B
+MovePetは待機状態の動作処理を行うスクリプトである．
+目標位置を設定し，その位置に向かってペットアバターの移動を行う．
+一定距離移動すると目標位置を設定し直し，その新しく設定した目標位置へと移動する．
+この動作を待機状態の間繰り替えす．
+前述したように，このスクリプトは触れ合い可能状態へ移行する際にPetControllerによって停止し，待機状態へ移行する際に起動する．
 
-HeadLookController�̓A�Z�b�g�X�g�A������肵���X�N���v�g�ŁA���������������̃{�[�����w�肵�Ă��̃{�[���݂̂𓮂����B
-���̃X�N���v�g�𗘗p���āA�y�b�g�A�o�^�[�̎񕔕��ɂ�����{�[�����瓪�����ɂ�����{�[�����w�肵��݂̂����삷��悤�ɂ��A�����ړ����s���B
-�O�q�����悤�ɁA���̃X�N���v�g�͐G�ꍇ���\��Ԃֈڍs����ۂ�PetController�ɂ���ċN�����A�ҋ@��Ԃֈڍs����ۂɒ�~����B
-HeadLookController�X�N���v�g�̃v���p�e�B��}\ref{fig:headlook}�Ɏ����B
+HeadLookControllerはアセットストアから入手したスクリプトで，動かしたい部分のボーンを指定してそのボーンのみを動かす．
+このスクリプトを利用して視線移動を行う．
+前述したように，このスクリプトは触れ合い可能状態へ移行する際にPetControllerによって起動し，待機状態へ移行する際に停止する．
+HeadLookControllerスクリプトのインスペクターを図\ref{fig:headlook}に示す．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=11cm,clip]{images/sc9.eps}
-\caption{HeadLookController�̃v���p�e�B}
+\caption{HeadLookControllerのインスペクター}
 \label{fig:headlook}
 \end{figure}
 
-DirectionManager�̓y�b�g�̎����ړ����X���[�Y�ɍs�����߂Ɏ����⊮�I�u�W�F�N�gFaceComplition�̓��쏈�����s���X�N���v�g�ł���B
-FaceComplition�̏����ʒu�̓J�����ŁA�J�����ɒǏ]���ē����B
-�y�b�g�A�o�^�[�ƃ��[�U�A�o�^�[���ڐG����ƁA�ړ�������[�U�A�o�^�[�ɐݒ肵�ړ����J�n����B
-���̂Ƃ�������^�[�Q�b�g��FaceComplition�Ɏw�肷�邱�ƂŁA�y�b�g��FaceComplition�Ɏ�����������B
-���[�U�A�o�^�[�ƐڐG����ƁA������^�[�Q�b�g�����[�U�A�o�^�[�ɐݒ肵�A���̌�̓��[�U�A�o�^�[�ɒǏ]���Ĉړ�����B
-���[�U�A�o�^�[���Փ˗��E���Ĉ��t���[���o�߂���Ǝ��̈ړ�����J�����ɐݒ肵�ړ����J�n���A�O�q���������Ɠ��l�Ɏ�����^�[�Q�b�g��FaceComplition�ɐݒ肵�A�J�����ƏՓ˂���Ǝ�����^�[�Q�b�g���J�����ɐݒ肷��B
-���̌�̓J�����ɒǏ]���Ĉړ�����B
-�y�b�g�̓���̃t���[�`���[�g��\ref{fig:chart1}�Ɏ����B
+動かすボーンの指定はSegments下のElement0で行った．各パラメータの説明を述べる．
+ボーンNeck1からボーンHeadまでのボーンを指定し，その部分のみを動かす．ペットアバターの首から頭頂部までにあたる．
+Threshold Angle Differenceはターゲットとペットアバターの角度がここで指定した角度よりも大きいとき，ターゲットの方に回転し始める閾値となる角度である．
+Bending Multiplierはターゲットとの角度の大きさと比較して指定したボーンがどのくらい大きく動くかを表す値である．
+Max Angle Differenceはターゲットとの角度がこの値よりも大きくならないよう保持する．しかし，Max Bending Angleで設定した値に達したときはそれ以上動かない．
+Responsivenessはターゲットを追う速度の値である．LookTargetは視線先ターゲットを指す．
+
+DirectionManagerはペットの視線移動をスムーズに行うために視線補完オブジェクトFaceComplitionの動作処理を行うスクリプトである．
+FaceComplitionの初期位置はカメラで，カメラに追従して動く．
+ペットアバターとユーザアバターが接触すると，移動先をユーザアバターに設定し移動を開始する．
+このとき視線先ターゲットをFaceComplitionに指定することで，ペットはFaceComplitionに視線を向ける．
+ユーザアバターと接触すると，視線先ターゲットをユーザアバターに設定し，その後はユーザアバターに追従して移動する．
+ユーザアバターが衝突離脱して一定フレーム経過すると次の移動先をカメラに設定し移動を開始し，前述した処理と同様に視線先ターゲットをFaceComplitionに設定し，カメラと衝突すると視線先ターゲットをカメラに設定する．
+その後はカメラに追従して移動する．
+ペットの動作のフローチャートを\ref{fig:chart1}に示す．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=16cm,clip]{images/chart1.eps}
-\caption{�y�b�g�̓���̃t���[�`���[�g}
+\caption{ペットの動作のフローチャート}
 \label{fig:chart1}
 \end{figure} 
 

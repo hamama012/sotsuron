@@ -1,4 +1,4 @@
-\documentclass[9pt]{abstract}
+﻿\documentclass[9pt]{abstract}
 \usepackage{multicol}
 
 \usepackage[dvipdfm]{graphicx}
@@ -19,65 +19,65 @@
 \begin{document}
 
 \begin{center}
-{\Large {\gtfamily �g�̐���L����o�[�`�����y�b�g�̊J��}}\\\vspace{.5zw}
-{\large 1432104�@�����@�t�ړ�}\\\vspace{.5zw}
-{\large �w�������F�����@����\hspace{6mm}�^���@�Y��}\\\vspace{.5zw}
+{\Large {\gtfamily 身体性を有するバーチャルペットの開発}}\\\vspace{.5zw}
+{\large 1432104　中島　葉瑠奈}\\\vspace{.5zw}
+{\large 指導教員：菅原　研次\hspace{6mm}真部　雄介}\\\vspace{.5zw}
 \end{center}
 
 \begin{main}
 \begin{multicols}{2}
 
 
-\section{�͂��߂�}
-���_����������銳�҂͔N�X�����̈�r��H���Ă���D���̗v���̈�Ƃ����̂��C�X�g���X�ł���D�X�g���X�ւ̌��ʓI�ȗÖ@�̂P�Ƃ��āC�A�j�}���Z���s�[������D�A�j�}���Z���s�[�Ƃ�,�����ƐG�ꍇ�����Ƃɂ�萸�_�E�g�̋@�\�̌����}�鎡�Ö@�����C���{�ɂ͉q���ʂȂǂ̖�肪����D �A�j�}���Z���s�[�̑�ֈĂƂ��āC�ߔN�y�b�g���{�b�g��o�[�`�����y�b�g�̌������i�߂��Ă���D
+\section{はじめに}
+精神疾患を抱える患者は年々増加の一途を辿っている．その要因の一つとされるのが，ストレスである．ストレスへの効果的な療法の１つとして，アニマルセラピーがある．アニマルセラピーとは,動物と触れ合うことにより精神・身体機能の向上を図る治療法だが，実施には衛生面などの問題がある． アニマルセラピーの代替案として，近年ペットロボットやバーチャルペットの研究が進められている．
 
-�y�b�g���{�b�g�͎��̂�L�������I�ȐڐG���\�ł���_����g�̐�������ƒ�`\cite{biblabel1}����A�o�[�`�����y�b�g�ɔ�ׂăZ���s�[���ʂ������Ƃ����B
-���������p�Z�p�ɂ���Ă̓o�[�`�����y�b�g�ł����Ă��g�̐���L���邱�Ƃ͉\�ł���A�g�̐���L����o�[�`�����y�b�g�͒ʏ�̂����荂���Z���s�[���ʂ𓾂邱�Ƃ��ł���Ɛ��������B 
+ペットロボットは実体を有し物理的な接触が可能である点から身体性があると定義\cite{biblabel1}され、バーチャルペットに比べてセラピー効果が高いとされる。
+しかし利用技術によってはバーチャルペットであっても身体性を有することは可能であり、身体性を有するバーチャルペットは通常のそれより高いセラピー効果を得ることができると推測される。 
 
-�����Ŗ{�����ł́C�g�̐���L����o�[�`�����y�b�g�̊J����ړI�Ƃ���D
+そこで本研究では，身体性を有するバーチャルペットの開発を目的とする．
 
-%���̂�L���邱�Ƃɂ��A���[�U����ӊ��Ƃ̕����I�ȑ��ݍ�p���\�Ƃ���g�̐��i���p�j
+%実体を有することにより、ユーザや周辺環境との物理的な相互作用を可能とする身体性（引用）
 
-\section{��s����}
-�т�\cite{biblabel1}�́C�g�̐��̊ϓ_����y�b�g���{�b�g�ƃo�[�`�����y�b�g�Ƃ̂ӂꂠ���ɂ��Z���s�[���ʂ̍��ق��r���؂��C�y�b�g���{�b�g�̕����������ʂ�����ꂽ�Ƃ����D
-�����Ŏg�p���ꂽ�o�[�`�����y�b�g�̓^�u���b�g��ɕ\�����ꂽ3DCG�L�����N�^�ŁCLeap Motion��p���ă��[�U�̐ڐG�����m���C�K�����ӂ�C������Ƃ����������s�����s���D
+\section{先行研究}
+林ら\cite{biblabel1}は，身体性の観点からペットロボットとバーチャルペットとのふれあいによるセラピー効果の差異を比較検証し，ペットロボットの方が高い効果が得られたとした．
+実験で使用されたバーチャルペットはタブレット上に表示された3DCGキャラクタで，Leap Motionを用いてユーザの接触を感知し，尻尾をふる，下げるといった反応行動を行う．
 
-�т�͐g�̐��Ƃ��Č������ƐڐG�t�B�[�h�o�b�N�̂Q�̓����������Ă���D������t�^���邱�ƂŃo�[�`�����y�b�g�ɂ����Ă��g�̐���L���邱�Ƃ��\�ɂȂ�ƍl����D
+林らは身体性として現実感と接触フィードバックの２つの特性をあげている．これらを付与することでバーチャルペットにおいても身体性を有することが可能になると考える．
 
-\section{��Ď�@�Ɛ݌v}
+\section{提案手法と設計}
 
-\ref{��Ď�@�̐}}�ɒ�Ď�@�̗���������B
+\ref{提案手法の図}に提案手法の流れを示す。
 
 \begin{minipage}{26zw}
 \begin{center}
-\includegraphics*[width=8.5cm,clip]{images/��Ď�@�}.eps}\\
-\label{��Ď�@�̐}}
-�}�P�D��ăV�X�e���̐}\\
+\includegraphics*[width=8.5cm,clip]{images/design1.eps}\\
+\label{提案手法の図}
+図１．提案システムの図\\
 \end{center}
 \end{minipage}\\
 
-���[�U�̓f�o�C�X�Ƃ��ăR���g���[���AHTC Vive�A�w�b�h�z���𑕒�������ԂŃV�X�e�����N������BHTC Vive�ɉf���Ƃ��ďo�͂���鉼�z��ԓ��ɂ̓��[�U�ƃy�b�g�̓��ނ̃A�o�^�[���p�ӂ���A���[�U�̓����HTC Vive�y�уR���g���[���ɂ��g���b�L���O�C���z��Ԃɔ��f�����D���̏󋵂ɉ����ăy�b�g�Ǘ��v���O�������y�b�g�̓����A�j���[�V�����̐�����s���B���[�U�ƃy�b�g�̃A�o�^�[���ڐG�����ۂɂ́A���[�U�Ǘ��v���O�����֏Փˏ�񂪓n����R���g���[���֐U�����߂��o����ڐG�t�B�[�h�o�b�N���N�����B
+ユーザはデバイスとしてコントローラ、HTC Vive、イヤホンを装着した状態でシステムを起動する。HTC Viveに映像として出力される仮想空間内にはユーザとペットの二種類のアバターが用意され、ユーザの動作はHTC Vive及びコントローラによりトラッキング，仮想空間に反映される．その状況に応じてペット管理プログラムがペットの動作やアニメーションの制御を行う。ユーザとペットのアバターが接触した際には、ユーザ管理プログラムへ衝突情報が渡されコントローラへ振動命令が出され接触フィードバックを起こす。
 
-�V�X�e���N�����̓y�b�g�����R�ɓ������ҋ@��Ԃ���J�n����B���̏�ԂŃ��[�U���y�b�g���Ăԓ�����s�����ƂŁA�G�ꍇ���\��Ԃւƈڍs����B���̏�Ԃ͉t�I�ȑJ�ڂ��\�ł���B�y�b�g�̓��[�U���ڐG����ƃ��[�U�̖ڕ��������ւƎ������ύX���A�K�������E�ɐU�邱�ƂŊ�т�\������B�ڐG���莞�ԐڐG���Ȃ��Ƃ��A�y�b�g�̓��[�U�̖ڕ����Ɏ�����߂��K����U�铮����~����B�y�b�g�y�у��[�U�̃A�o�^�[��3DCG���f�����O�\�t�g�E�F�A�ł���Maya���g�p���č쐬�����B
+システム起動時はペットが自由に動き回る待機状態から開始する。その状態でユーザがペットを呼ぶ動作を行うことで、触れ合い可能状態へと移行する。この状態は可逆的な遷移が可能である。ペットはユーザが接触するとユーザの目部分から手へと視線先を変更し、尻尾を左右に振ることで喜びを表現する。接触後一定時間接触しないとき、ペットはユーザの目部分に視線を戻し尻尾を振る動作を停止する。ペット及びユーザのアバターは3DCGモデリングソフトウェアであるMayaを使用して作成した。
 
 \begin{minipage}{26zw}
 \begin{center}
 \includegraphics*[width=7.7cm,clip]{images/sc2.eps}\\
-�}�Q�D�X�N���[���V���b�g\\
+図２．スクリーンショット\\
 \end{center}
 \end{minipage}
 
-\section{�����ƌ���}
-�{�����ŊJ�������y�b�g�ƁA����̋@�\������s�����ɋߕt���������p�y�b�g��p�ӂ��A�����2�̃y�b�g�Ƃӂꂠ���������s�����B���̌���{�������⎆�����ł͓�̃y�b�g���r���Ė{�����̂��̂͐g�̐������������A�V�X�e���̊e�v�f�����ꂼ��ǂ̒��x�������ɉe�����Ă�������q�˂��B
+\section{実験と結果}
+本研究で開発したペットと、これの機能を削り先行研究に近付けた実験用ペットを用意し、これら2つのペットとふれあった後質問紙に回答する実験を行った。質問紙では二つのペットを比較して本研究のペットに身体性を感じたか、システムの各要素がそれぞれどの程度現実感に影響していたかを尋ねた。
 
-�W�v�̌��ʁA�����p�y�b�g�Ɣ�r���č����g�̐��𓾂邱�Ƃ��ł����B�ڐG�t�B�[�h�o�b�N�͐ڐG�̗L�������[�U�ɕ�����₷�������̂ɖ𗧂��A�U���̋���𒲐�����K�v������B��������^����v�f�Ƃ��čł��e����^����Ǝv��ꂽHMD�͌l�����������A�l�ɂ���ĕ]���������ꂽ�B����Ƀy�b�g�����[�U�Ɍ����铮��̖{���炵����A�C���^���N�e�B�u�ȍs�����������ɑ傫�ȉe����^���邱�Ƃ��\���ł��錋�ʂƂȂ����B
+集計の結果、実験用ペットと比較して高い身体性を得ることができた。接触フィードバックは接触の有無をユーザに分かりやすく示すのに役立つが、振動の強弱を調整する必要がある。現実感を与える要素として最も影響を与えると思われたHMDは個人差が激しく、人によって評価が分かれた。代わりにペットがユーザに見せる動作の本物らしさや、インタラクティブな行動が現実感に大きな影響を与えることが予測できる結果となった。
 
-\section{������}
-�g�̐��������Ȃ��o�[�`�����y�b�g�Ɣ�r���Đg�̐��𓾂邱�Ƃ��ł����B���⎆�����̌��ʂ���A�o�[�`�����y�b�g�͂��̓�����\��傫���������ɉe�����邱�Ƃ��\�z�����B���������āA�����Ŋ��炩�y�b�g�̓������Č����邱�Ƃł�茻���������߂邱�Ƃ��o����ƍl������B
-�܂��A�ڐG�t�B�[�h�o�b�N�ɂ����Ă̓R���g���[���̐U���������A���ȐG�o�Č����\�ȃf�o�C�X���e���Ō����E�J������Ă���A�����̊J�����i�߂΍X�Ȃ�g�̐��̌��オ���҂ł���B
+\section{おわりに}
+身体性をもたないバーチャルペットと比較して身体性を得ることができた。質問紙調査の結果から、バーチャルペットはその動きや表情が大きく現実感に影響することが予想される。したがって、精密で滑らかペットの動きを再現することでより現実感を高めることが出来ると考えられる。
+また、接触フィードバックにおいてはコントローラの振動よりもリアルな触覚再現が可能なデバイスが各所で研究・開発されており、これらの開発が進めば更なる身体性の向上が期待できる。
 
 \begin{thebibliography}{9}
-\bibitem{biblabel1} �� ����, ���� ���� : �g�̐����l�H�y�b�g�Ƃ̂ӂꂠ���ɂ��Z���s�[���ʂɗ^����e��, ���{�����H�w��_����, vol.16, pp.75-81, 2016.
+\bibitem{biblabel1} 林 里奈, 加藤 昇平 : 身体性が人工ペットとのふれあいによるセラピー効果に与える影響, 日本感性工学会論文誌, vol.16, pp.75-81, 2016.
 \end{thebibliography}
 
 \end{multicols}

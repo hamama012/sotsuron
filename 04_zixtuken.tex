@@ -1,20 +1,20 @@
-\chapter{�����ƕ]��}
-�{�͂ł́C�{�����ɂ�����֘A�������q�ׂ�D
+﻿\chapter{実験と評価}
+本章では，本研究における関連研究を述べる．
 
-\section{������}
+\section{実験環境}
 
-�{�����̃o�[�`�����y�b�g�̊J���A����ю�������\\ref{table:environment}�Ɏ����B
-�J���A�������ɓ����R���s���[�^�ōs�����B
+本研究のバーチャルペットの開発，および実験環境を表\ref{table:environment}に示す．
+開発，実験共に同じコンピュータで行った．
 
 \begin{table}[htb]
 \centering
-\caption{�J���A������}
+\caption{開発，実験環境}
 \label{table:environment}
 \scalebox{1.00}{
 \begin{tabular}{|c||l|l|c|l|}
 \hline
 CPU			&Intel(R) Core(TM) i7-4790K CPU @ 4.00GHz \\ \hline
-������		&32.0GB \\ \hline
+メモリ		&32.0GB \\ \hline
 Video Card	&NVIDIA GeForce GTX 1060 \\ \hline 
 OS			&Windows 10 Enterprise \\ \hline 
 SoftWare		&Unity5.5.0 f3 Perspnal\\ 
@@ -24,176 +24,176 @@ SoftWare		&Unity5.5.0 f3 Perspnal\\
 \end{tabular}}
 \end{table}
 
-\section{�����p�o�[�`�����y�b�g}
-�{�����ŊJ�������o�[�`�����y�b�g�����ɁA�@�\�����炵��s�����̂��̂ɉ\�Ȍ���ߕt���������p�o�[�`�����y�b�g���쐬�����B
-�{�����ŊJ�������o�[�`�����y�b�g�͐g�̐���L����Ɖ��肵�Ĉȍ~�͐g�̐���������ƌĂсA�����p�o�[�`�����y�b�g�͐g�̐��Ȃ������ƋL�q����B
-��̏������r�������̂�\\ref{table:petCondition}�Ɏ����B
+\section{実験用バーチャルペット}
+本研究で開発したバーチャルペットを元に，機能を減らし先行研究のものに可能な限り近付けた実験用バーチャルペットを作成した．
+本研究で開発したバーチャルペットは身体性を有すると仮定して以降は身体性あり条件と呼び，実験用バーチャルペットは身体性なし条件と記述する．
+二つの条件を比較したものを表\ref{table:petCondition}に示す．
 
 \begin{table}[htb]
 \centering
-\caption{�y�b�g�����̔�r}
+\caption{ペット条件の比較}
 \label{table:petCondition}
 \scalebox{1.00}{
 \begin{tabular}{|c||l|l|c|c|}
 \hline
- & �g�̐�������� & \multicolumn{1}{|c|}{�g�̐��Ȃ�����} \\
+ & 身体性あり条件 & \multicolumn{1}{|c|}{身体性なし条件} \\
 \hline \hline
-�f�o�C�X	& HMD	& �R���g���[�� \\
-		& �R���g���[��	& \\
-		& �C���z��	& \\
+デバイス	& HMD	& コントローラ \\
+		& コントローラ	& \\
+		& イヤホン	& \\
 \hline
-�ڐG�t�B�[�h�o�b�N & �U�� & �Ȃ� \\
+接触フィードバック & 振動 & なし \\
 \hline
-�y�b�g�̓���	& �ړ�		& �K����U�� \\
-			& �����ړ�	& \\
-			& �K����U��	& \\
+ペットの動作	& 移動		& 尻尾を振る \\
+			& 視線移動	& \\
+			& 尻尾を振る	& \\
 \hline
-�� & �X�� & Unity�̃f�t�H���g��Ԃɔ�����  \\
+環境 & 森林 & Unityのデフォルト空間に白い床  \\
 \hline
-���� & ���� & �Ȃ� \\
+環境音 & あり & なし \\
 \hline 
 \end{tabular}}
 \end{table}
 
-�g�p����f�o�C�X�̓R���g���[���̂P��ނŁA�g�̐���������Ɠ��l��HMD�t����VR��p�R���g���[�����g�p����B
-�R���g���[���̃g���b�L���O�̓s����A�J�����Ƃ���HMD���g���K�v������B
-�����Q���҂ɂ�HMD�𑕒������Œ肵����ԂŁA�E��ɃR���g���[����������ʂ����Ăӂꂠ���Ă��炤�B
-�y�b�g�̓���̓��[�U�ƐڐG����ƐK����U����ނ݂̂ł���B���[�U�������ƈ�莞�Ԍo�ߌ�ɐK����U�铮����~����B
+使用するデバイスはコントローラの１種類で，身体性あり条件と同様にHMD付属のVR専用コントローラを使用する．
+コントローラのトラッキングの都合上，カメラとしてHMDを使う必要がある．
+実験参加者にはHMDを装着せず固定した状態で，右手にコントローラを持ち画面を見てふれあってもらう．
+ペットの動作はユーザと接触すると尻尾を振る一種類のみである．ユーザが離れると一定時間経過後に尻尾を振る動作を停止する．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=12cm,clip]{images/sc5.eps}
-\caption{�����p�y�b�g�̃X�N���[���V���b�g}
+\caption{実験用ペットのスクリーンショット}
 \label{fig:sc1}
 \end{figure} 
 
-\section{�������@}
-�����J�n�O�ɁA�����Q���҂ɂ̓o�[�`�����y�b�g�Ƃӂꂠ���A���⎆�ɉ񓚂�������ł��邱�Ƃ���������B���̍ۂɃR���g���[���̑���������s�����B
+\section{実験方法}
+実験開始前に，実験参加者にはバーチャルペットとふれあい，質問紙に回答する実験であることを説明した．その際にコントローラの操作説明も行った．
 
-�܂��A�g�̐��Ȃ������̃y�b�g�Ƃӂꂠ���Ă��炢�A���̌�V�[����؂�ւ�HMD�ƃC���z���𑕒����g�̐���������̃y�b�g�Ƃӂꂠ���Ă��炤�B
-�Ō�ɐg�̐��Ɋւ��鎿�⎆���������{�����B����ɂ�蓾��ꂽ���ϗʃf�[�^�𕪐͂��A�{�����ŊJ�������o�[�`�����y�b�g�̐g�̐��ɂ��ĕ]������B
+まず，身体性なし条件のペットとふれあってもらい，その後シーンを切り替えHMDとイヤホンを装着し身体性あり条件のペットとふれあってもらう．
+最後に身体性に関する質問紙調査を実施した．これにより得られた多変量データを分析し，本研究で開発したバーチャルペットの身体性について評価する．
 
-\section{�]�����@}
+\section{評価方法}
 
-�o�[�`�����y�b�g�Ƃӂꂠ������ɍs�����⎆�����ɂ���ďW�߂��f�[�^�𕪐͂��A�{�����ŊJ�������o�[�`�����y�b�g�͐g�̐���L���邩�ǂ����̕]�����s���B
-���⎆�͓�̃y�b�g���r���A�g�̐���������S�̂��g�̐���L���Ă��邩�ǂ����𒲍�����O���S���ڂƁA�g�̐���������ɂ�����e�v�f�ɑ΂��ǂ���������������邱�Ƃ��o�������𒲍�����㔼�P�R���ڂ̓񕔂ō\�������B�A���P�[�g�̑S���ڂ�\�Ɏ����B
+バーチャルペットとふれあった後に行う質問紙調査によって集めたデータを分析し，本研究で開発したバーチャルペットは身体性を有するかどうかの評価を行う．
+質問紙は二つのペットを比較し，身体性あり条件全体が身体性を有しているかどうかを調査する前半４項目と，身体性あり条件における各要素に対しどれ程現実感を感じることが出来たかを調査する後半１３項目の二部で構成される．アンケートの全項目を表に示す．
 
 \begin{table}[H]
 \centering
-\caption{�y�b�g�����̔�r}
+\caption{質問紙の項目}
 \label{table:petCondition}
 \scalebox{1.00}{
 \begin{tabular}{|c||l|l|c||}
 \hline
-�區��	&	\multicolumn{1}{|c|}{������} \\
+大項目	&	\multicolumn{1}{|c|}{小項目} \\
 \hline\hline
-						&	�y�b�g�����̂������Ă���悤�Ɋ������� \\
-�g�̐��������			&	�y�b�g��{���̂悤�Ɋ������� \\
-�S�̂̐g�̐�				&	���ۂɂ��̏�ɂ���悤�Ɋ����邱�Ƃ��ł����� \\
-						&	�R���g���[���̐U���ŐڐG��������₷���Ȃ����� \\
+						&	ペットが実体を持っているように感じたか \\
+身体性あり条件			&	ペットを本物のように感じたか \\
+全体の身体性				&	実際にその場にいるように感じることができたか \\
+						&	コントローラの振動で接触が分かりやすくなったか \\
 
 \hline
-				&	HMD�̎g�p \\
-				&	���� \\	
-				&	�y�b�g�����R�ɓ�����铮�� \\
-				&	�y�b�g�����[�U�̕��ɗ��铮�� \\
-�������̗v�f		&	�y�b�g����̌�����ς��铮�� \\
-				&	�K����U�铮�� \\
-				&	�w�i�i�؁A���j���� \\
+				&	HMDの使用 \\
+				&	環境音 \\	
+				&	ペットが自由に動き回る動作 \\
+				&	ペットがユーザの方に来る動作 \\
+現実感の要素		&	ペットが顔の向きを変える動作 \\
+				&	尻尾を振る動作 \\
+				&	背景（木，草）部分 \\
 
-				&�ł����������������v�f(�I�����j \\
-				&�ł��������������Ȃ������v�f�i�I�����j \\
+				&最も現実感を感じた要素(選択式） \\
+				&最も現実感を感じなかった要素（選択式） \\
 
 
 \hline 
 \end{tabular}}
 \end{table}
 
-�O���S���ڂɑ΂��ĂT���@�ŉ񓚂����߁A���̂����������Ɋւ���R���ڂ́u�ƂĂ��悭�������v���T�A�u�S�������Ȃ��v���P�Ƃ��A�ڐG�t�B�[�h�o�b�N�Ɋւ���P���ځu�R���g���[���̐U���ɂ���ăy�b�g�Ƃ̐ڐG��������₷���Ȃ������v�ł́u�ƂĂ��悭���������v���T�Ƃ��A�u�S��������Ȃ������v���P�Ƃ����B
-�㔼�P�R���ڂ̂����X���ڂɂ͑O���Ɠ������T���@�ŉ񓚂����߁A�u�ƂĂ��悭�������v���P�Ƃ��A�u�S�������Ȃ��v���T�Ƃ����B
+前半４項目に対して５件法で回答を求め，そのうち現実感に関する３項目は「とてもよく感じた」を５，「全く感じない」を１とし，接触フィードバックに関する１項目「コントローラの振動によってペットとの接触が分かりやすくなったか」では「とてもよく分かった」を５とし，「全く分からなかった」を１とした．
+後半１３項目のうち９項目には前半と同じく５件法で回答を求め，「とてもよく感じた」を１とし，「全く感じない」を５とした．
 
-���̂悤�Ȏړx�����b�J�[�g�ړx�ƌĂсA�P�ꍀ�ڂł̕��͂̏ꍇ�͏����ړx�Ƃ��Ďg�p�����B���������āA���⎆�����̏W�v���ʂ͏����ړx�Œ�`�\�Ȓ����l�A�ŕp�l�A�l���ʐ����Z�o���ĕ��͂��s���B
+このような尺度をリッカート尺度と呼び，単一項目での分析の場合は順序尺度として使用される．したがって，質問紙調査の集計結果は順序尺度で定義可能な中央値，最頻値，四分位数を算出して分析を行う．
 
-\section{��������}
-�����Q���҂́A22�΂���23�΂܂ł̒j��15���i���A����5���j�ł���B
-�}\ref{fig:chart1}�Ɏ��⎆�O���̏W�v�f�[�^���A�\\ref{table:analysis1}�ɕ��͌��ʂ������B
+\section{実験結果}
+実験参加者は，22歳から23歳までの男女15名（内，女性5名）である．
+図\ref{fig:chart1}に質問紙前半の集計データを，表\ref{table:analysis1}に分析結果を示す．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=12cm,clip]{images/graphic1.eps}
-\caption{���⎆�O���̏W�v����}
+\caption{質問紙前半の集計結果}
 \label{fig:chart1}
 \end{figure} 
 
 \begin{table}[H]
 \centering
-\caption{���͌���}
+\caption{質問紙前半の分析結果}
 \label{table:analysis1}
 \scalebox{1.00}{
 \begin{tabular}{|c||l|l|l|}
 \hline
-����	&	\multicolumn{1}{|c|}{�����l}	&	\multicolumn{1}{|c|}{�ŕp�l}	&	\multicolumn{1}{|c|}{�l���ʐ�} \\
+項目	&	\multicolumn{1}{|c|}{中央値}	&	\multicolumn{1}{|c|}{最頻値}	&	\multicolumn{1}{|c|}{四分位数} \\
 \hline\hline
-�y�b�g�����̂������Ă���悤�Ɋ�������			&4.5	&4	&1\\
-�y�b�g��{���̂悤�Ɋ�������					&4	&4	&2\\
-���ۂɂ��̏�ɂ���悤�Ɋ����邱�Ƃ��ł�����		&4	&4	&1\\
-�R���g���[���̐U���ŐڐG��������₷���Ȃ�����	&4	&5	&1.75\\
+ペットが実体を持っているように感じたか			&4.5	&4	&1\\
+ペットを本物のように感じたか					&4	&4	&2\\
+実際にその場にいるように感じることができたか		&4	&4	&1\\
+コントローラの振動で接触が分かりやすくなったか	&4	&5	&1.75\\
 \hline
 \end{tabular}}
 \end{table}
 
-�g�̐���]������O���ł́A�����l���S���ڂɂ�����4�ȏ�Ƃ����������l���������B���Ɂu�y�b�g�����̂������Ă���悤�Ɋ��������v�̍��ڂ͒����l���ł������A�܂��l���ʐ������������Ƃ���g�̐��Ȃ������Ɣ�r���Ď��̂�L���Ă���ƌ�����B
-�΂��āu�y�b�g��{���̂悤�Ɋ��������v�̍��ڂɂ����Ă͎l���ʐ����Q�ƍł��΂�����傫�������B
-�u�R���g���[���̐U���ɂ���ăy�b�g�Ƃ̐ڐG��������₷���Ȃ������v�̍��ڂ��B��ŕp�l�ɂT�̒l���������B�������A����Ŏl���ʐ��͍����l�������΂�����傫�����Ƃ�������B�{�����ł̓R���g���[���̐U���̒l��200�Ɣ��ɒႭ�ݒ肵�Ă���B���̂��߂ɁA�U�����Ă��邱�ƂɋC�t���Ȃ����������Q���҂���������ꂽ�B�U���͐l���F���ł��郌�x���̋����łȂ��Ă̓t�B�[�h�o�b�N�̈Ӗ����Ȃ����A�y�b�g�ƐG�ꍇ���Ƃ�������̐�����U���������Ƌt���ʂɂ��Ȃ�B�U���̋��x�ɂ��Ă͎������s���A��������K�v������B
+身体性を評価する前半では，中央値が全項目において4以上といった高い値を示した．特に「ペットが実体を持っているように感じたか」の項目は中央値が最も高く，また四分位数も小さいことから身体性なし条件と比較して実体を有していると言える．
+対して「ペットを本物のように感じたか」の項目においては四分位数が２と最もばらつきが大きかった．
+「コントローラの振動によってペットとの接触が分かりやすくなったか」の項目が唯一最頻値に５の値を示した．しかし，一方で四分位数は高い値を示しばらつきが大きいことも分かる．本研究ではコントローラの振動の値を200と非常に低く設定している．そのために，振動していることに気付かなかった実験参加者が数名見られた．振動は人が認識できるレベルの強さでなくてはフィードバックの意味がないが，ペットと触れ合うという動作の性質上振動が強いと逆効果にもなる．振動の強度については実験を行い，調整する必要がある．
 
-���ɁA�}\ref{fig:chart2}�A\ref{fig:chart3}�A\ref{fig:chart4}�Ɏ��⎆�O���̏W�v�f�[�^���A�\\ref{table:analysis1}�ɕ��͌��ʂ������B
+次に，図\ref{fig:chart2}，\ref{fig:chart3}，\ref{fig:chart4}に質問紙前半の集計データを，表\ref{table:analysis1}に分析結果を示す．
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=12cm,clip]{images/graphic2.eps}
-\caption{���⎆�㔼�̏W�v����}
+\caption{質問紙後半の集計結果}
 \label{fig:chart2}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=13cm,clip]{images/graphic4.eps}
-\caption{�ł����������������v�f}
+\caption{最も現実感を感じた要素}
 \label{fig:chart3}
 \end{figure} 
 
 \begin{figure}[H]
 \centering
 \includegraphics*[width=13cm,clip]{images/graphic3.eps}
-\caption{�ł��������������Ȃ������v�f}
+\caption{最も現実感を感じなかった要素}
 \label{fig:chart4}
 \end{figure} 
 
 \begin{table}[H]
 \centering
-\caption{���͌���}
+\caption{質問紙後半の分析結果}
 \label{table:analysis2}
 \scalebox{1.00}{
 \begin{tabular}{|c||l|l|l|}
 \hline
-����	&	\multicolumn{1}{|c|}{�����l}	&	\multicolumn{1}{|c|}{�ŕp�l}	&	\multicolumn{1}{|c|}{�l���ʐ�} \\
+項目	&	\multicolumn{1}{|c|}{中央値}	&	\multicolumn{1}{|c|}{最頻値}	&	\multicolumn{1}{|c|}{四分位数} \\
 \hline\hline
-HMD�̎g�p				&4	&5	&2\\
-����					&5	&5	&1\\	
-�y�b�g�����R�ɓ�����铮��	&5	&5	&1\\
-�y�b�g�����[�U�̕��ɗ��铮��	&4.5	&5	&1\\
-�y�b�g����̌�����ς��铮��	&3.5	&5	&2.75\\
-�K����U�铮��			&4.5	&5	&1\\
-�w�i�i�؁A���j				&5	&5	&1\\
+HMDの使用				&4	&5	&2\\
+環境音					&5	&5	&1\\	
+ペットが自由に動き回る動作	&5	&5	&1\\
+ペットがユーザの方に来る動作	&4.5	&5	&1\\
+ペットが顔の向きを変える動作	&3.5	&5	&2.75\\
+尻尾を振る動作			&4.5	&5	&1\\
+背景（木，草）				&5	&5	&1\\
 
 \hline 
 \end{tabular}}
 \end{table}
 
-�������Ɋ֘A����Ɨ\�z�����e�v�f�𒲍�����㔼�ł́A�u�����v�u�y�b�g�����R�ɓ�����铮��v�u�w�i�v�������l�ɍł������l���������B
-�����R���ڂ͎l���ʐ����������΂�������Ȃ����Ƃ���A�������̌���ɗǂ��e����^�������ڂƂ��ĐM���ł���B
-�������Ȃ���A�u�y�b�g�����R�ɕ�����铮��v�y�сu�w�i�v�͍ł��������������Ȃ������v�f�ɂ����āu�y�b�g����̌�����ς���v����ƕ��э����������߂Ă���B���̈���ŁA�����O���ڂ͍ł����������������v�f�Ƃ��Ă��������Ă���_����A���̍��ڂ��������ɂǂ̂悤�ȉe���������Ă���̂��ׂ������͂���K�v������B
-�������ɑ傫�ȉe����^����Ǝv��ꂽHMD�́A�����l�͂S�ƍ����l�����������̂̎l���ʐ����傫���A�[���΂�������Ƃ�������B�������A�ł����������������v�f�Ƃ��č����������߂Ă��邱�Ƃ���A�l�������������Ƃ��l������B�������̊֌W�œ�����邱�Ƃ��s�\���������߁AHMD�͒��ȃ��[�h�ł̎g�p�����B���̓_���e�����Ă��邱�Ƃ��\�������B
+現実感に関連すると予想される各要素を調査する後半では，「環境音」「ペットが自由に動き回る動作」「背景」が中央値に最も高い値を示した．
+これら３項目は四分位数も小さくばらつきが少ないことから，現実感の向上に良い影響を与えた項目として信頼できる．
+しかしながら，「ペットが自由に歩き回る動作」及び「背景」は最も現実感を感じなかった要素において「ペットが顔の向きを変える」動作と並び高い割合を占めている．その一方で，これら三項目は最も現実感を感じた要素としてもあげられている点から，この項目が現実感にどのような影響を示しているのか細かく分析する必要がある．
+現実感に大きな影響を与えると思われたHMDは，中央値は４と高い値を示したものの四分位数が大きく，票がばらついたことが分かる．しかし，最も現実感を感じた要素として高い割合を占めていることから，個人差が激しいことが考えられる．実験環境の関係で動き回ることが不可能だったため，HMDは着席モードでの使用した．この点も影響していることが予測される．
 
 
 %http://www.heisei-u.ac.jp/ba/fukui/pdf/kiyou2004.pdf

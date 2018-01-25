@@ -12,11 +12,11 @@
 \contentsline {figure}{\numberline {4.1}{\ignorespaces 提案システムの構成}}{9}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces 仮想空間の詳細設計}}{10}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces 仮想空間}}{11}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces ユーザアバター}}{11}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces バーチャルペットのアバター}}{12}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces 提案システムの構成}}{13}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces 提案システムの構成}}{14}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces HeadLookControllerのプロパティ}}{15}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces ユーザアバター}}{12}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces バーチャルペットのアバター}}{13}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces ユーザ管理部の詳細設計}}{13}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces ペット管理部の詳細設計}}{14}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces HeadLookControllerのインスペクター}}{15}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces ペットの動作のフローチャート}}{16}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces 実験用ペットのスクリーンショット}}{18}

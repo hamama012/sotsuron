@@ -1,25 +1,25 @@
-\chapter{���p�Z�p}
-�{�͂ł́C�{�����ɗ��p����e�Z�p�ɂ��ďq�ׂ�D
+﻿\chapter{利用技術}
+本章では，本研究に利用する各技術について述べる．
 
 \section{Unity}
 
-Unity�Ƃ́C���j�e�B�E�e�N�m���W�[�Y���J�����������J�������������Q�[���G���W���ł���D
-���o�C���CVR,AR,�f�X�N�g�b�v�C�R���\�[���CWeb�Ɛ������̃v���b�g�z�[���ɑΉ����Ă���C���̏_��͋ɂ߂č����D�ȈՂȂ��̂ł���΃v���O���~���O���s�킸�Ƃ��RD�X�e�[�W�̍\�z�╨���G���W���̓������\�ł���D�܂��RD�����łȂ��C�QD�`��ɂ��Ή����Ă���D
-�X�ɁC�A�Z�b�g�X�g�A�ƌĂ΂��V���b�v�ő��̃��[�U���쐬�����v���O������RDCG���f���C�e�N�X�`���Ƃ������f�[�^���A�Z�b�g�Ƃ����`�Œ񋟂���Ă���C�v���W�F�N�g�ɒ��ڃC���|�[�g���Ďg�p���邱�Ƃ��ł���D
-�R�c��Ԃ̍쐬���e�Ղł��邱�Ƃ���C�{�����ł�Unity���g�p����D
+Unityとは，ユニティ・テクノロジーズが開発した総合開発環境を内蔵するゲームエンジンである．
+モバイル，VR,AR,デスクトップ，コンソール，Webと数多くのプラットホームに対応しており，その柔軟性は極めて高い．簡易なものであればプログラミングを行わずとも３Dステージの構築や物理エンジンの導入が可能である．また３Dだけでなく，２D描画にも対応している．
+更に，アセットストアと呼ばれるショップで他のユーザが作成したプログラムや３DCGモデル，テクスチャといったデータがアセットという形で提供されており，プロジェクトに直接インポートして使用することができる．
+３Ｄ空間の作成が容易であることから，本研究ではUnityを使用する．
 
 \begin{figure}[htb]
 \centering
 \includegraphics*[width=16cm,clip]{images/sc4.eps}
-\caption{Unity�̊J�����}
+\caption{Unityの開発画面}
 \label{fig:unity}
 \end{figure}
 
 \section{HTC Vive}
 
-HTC Vive�Ƃ́CHTC��Valve Corporation�̋����ŊJ�����ꂽ�o�[�`�������A���e�B�����w�b�h�}�E���g�f�B�X�v���C�ł���D
-�����̓�ӏ��Ƀx�[�X�X�e�[�V������ݒu���邱�ƂŁC�ŏ�1.5m�~2m�C�ő�3m�~4m�͈̔͂Ń��[�U�̓��������A���^�C���Ƀg���b�L���O�C���z�����ɔ��f�ł���DVR��p�ɐ݌v���ꂽ�R���g���[�����t�����Ă���C�����I�ȑ���ƃW�F�X�`���[�������\�D
-�{�����ł͌����������߂邽�߂�HTC Vive���C�ڐG�t�B�[�h�o�b�N�̎����ɃR���g���[�����g�p����D
+HTC Viveとは，HTCとValve Corporationの共同で開発されたバーチャルリアリティ向けヘッドマウントディスプレイである．
+部屋の二箇所にベースステーションを設置することで，最小1.5m×2m，最大3m×4mの範囲でユーザの動きをリアルタイムにトラッキング，仮想現実に反映できる．VR専用に設計されたコントローラが付属しており，直感的な操作とジェスチャーを実現可能．
+本研究では現実感を高めるためにHTC Viveを，接触フィードバックの実装にコントローラを使用する．
 
 \begin{figure}[htb]
 \centering
@@ -33,7 +33,7 @@ HTC Vive�Ƃ́CHTC��Valve Corporation�̋����ŊJ�����ꂽ�o�[�`�������A���e�B�����w
 
 \begin{minipage}{0.50\hsize}
 \includegraphics*[width=7.8cm,clip]{images/technology02.eps}
-\caption{�R���g���[��}
+\caption{コントローラ}
 \label{fig:controller}
 \end{minipage}
 
@@ -42,18 +42,18 @@ HTC Vive�Ƃ́CHTC��Valve Corporation�̋����ŊJ�����ꂽ�o�[�`�������A���e�B�����w
 
 \section{Maya}
 
-Maya�̓I�[�g�f�X�N�Ђɂ���ĊJ�����ꂽ�n�C�G���h�R�����R���s���[�^�O���t�B�b�N�X�\�t�g�E�F�A�ł���D
-�n���E�b�h���͂��߂Ƃ����f�悩��Q�[���CCM�̐���Ɏg�p����Ă���D�f���VFX�s��ň��|�I�ȃV�F�A���ւ�C�Q�[���s��ɂ����Ă�Maya�Ɠ������R�����R���s���[�^�O���t�B�b�N�X�\�t�g�E�F�A�ł���3ds Max��50��50���ł���ƃI�[�g�f�X�N�Ђ͏q�ׂĂ���D
-�{�����Ŏg�p�����y�b�g�y�у��[�U�̎�̃A�o�^�[��Maya��p���č쐬�����D
+Mayaはオートデスク社によって開発されたハイエンド３次元コンピュータグラフィックスソフトウェアである．
+ハリウッドをはじめとした映画からゲーム，CMの制作に使用されている．映画のVFX市場で圧倒的なシェアを誇り，ゲーム市場においてもMayaと同じく３次元コンピュータグラフィックスソフトウェアである3ds Maxと50％50％であるとオートデスク社は述べている．
+本研究で使用したペット及びユーザの手のアバターはMayaを用いて作成した．
 
 \begin{figure}[htb]
 \centering
 \includegraphics*[width=16cm,clip]{images/sc3.eps}
-\caption{Maya�̐�����}
+\caption{Mayaの制作画面}
 \label{fig:maya}
 \end{figure}
 
 \section{Visual Studio}
 
-Visual Studio��Microsoft�Ђ��J�����������J�����ł���DC���CVisual Basic�CPython�Ƃ������W��ނ̃v���O��������ɑΉ����Ă���D�܂��CWindows�����łȂ�iOS��Linux�Ȃǂ�OS�ɂ��Ή��\�ł���D
-Unity�ɂ�MonoDevelop�Ƃ��������J�������W���Ŕ�����Ă��邪�CVisual Studio�����̃X�N���v�g�G�f�B�^�������@�\�ł��邱�Ƃ���C�{�����ł�Visual Studio�𗘗p����D
+Visual StudioはMicrosoft社が開発した統合開発環境である．C＃，Visual Basic，Pythonといった８種類のプログラム言語に対応している．また，WindowsだけでなくiOSやLinuxなどのOSにも対応可能である．
+UnityにはMonoDevelopという統合開発環境が標準で備わっているが，Visual Studioがこのスクリプトエディタよりも高機能であることから，本研究ではVisual Studioを利用する．
