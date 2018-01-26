@@ -26,5 +26,5 @@
 \contentsline {section}{\numberline {5.5}実験結果}{21}
 \contentsline {chapter}{\numberline {第6章}結論}{26}
 \contentsline {section}{\numberline {6.1}考察}{26}
-\contentsline {section}{\numberline {6.2}まとめ}{26}
+\contentsline {section}{\numberline {6.2}まとめ}{27}
 \contentsline {section}{\numberline {6.3}今後の課題}{27}
