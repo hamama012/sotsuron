@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {2.2}問題点}{5}
 \contentsline {chapter}{\numberline {第3章}利用技術}{6}
 \contentsline {section}{\numberline {3.1}Unity}{6}
-\contentsline {section}{\numberline {3.2}HTC Vive}{6}
+\contentsline {section}{\numberline {3.2}HTC Vive\cite {htc}}{6}
 \contentsline {section}{\numberline {3.3}Maya}{7}
 \contentsline {section}{\numberline {3.4}Visual Studio}{8}
 \contentsline {chapter}{\numberline {第4章}提案手法}{9}
