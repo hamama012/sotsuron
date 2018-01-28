@@ -1,4 +1,4 @@
-\chapter{先行研究}
+\chapter{先行研究と利用技術}
 本章では，本研究における先行研究を述べる．
 
 \section{概要}
@@ -66,3 +66,64 @@
 林らはペットロボットと比較して，バーチャルペットは身体性を有さないためにセラピー効果が低いとしている．
 しかしながら，バーチャルペットにおいても利用技術によって身体性を付与することは可能であると考える．
 本研究では，HMDを用いて仮想空間を出力し疑似的な現実感をユーザに与えると共に，コントローラの振動を利用して接触フィードバックを実装した身体性を有するバーチャルペットの開発を行う．
+
+\section{利用技術}
+
+本研究で利用する技術について述べる．
+
+\subsection{Unity}
+
+Unityとは，ユニティ・テクノロジーズが開発した総合開発環境を内蔵するゲームエンジンである．
+モバイル，VR,AR,デスクトップ，コンソール，Webと数多くのプラットホームに対応しており，その柔軟性は極めて高い．簡易なものであればプログラミングを行わずとも３Dステージの構築や物理エンジンの導入が可能である．また３Dだけでなく，２D描画にも対応している．
+更に，アセットストアと呼ばれるショップで他のユーザが作成したプログラムや３DCGモデル，テクスチャといったデータがアセットという形で提供されており，プロジェクトに直接インポートして使用することができる．
+３Ｄ空間の作成が容易であることから，本研究ではUnityを使用する．
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=16cm,clip]{images/sc4.eps}
+\caption{Unityの開発画面}
+\label{fig:unity}
+\end{figure}
+
+\subsection{HTC Vive\cite{htc}}
+
+HTC Viveとは，HTCとValve Corporationの共同で開発されたバーチャルリアリティ向けヘッドマウントディスプレイである．
+部屋の二箇所にベースステーションを設置することで，最小1.5m×2m，最大3m×4mの範囲でユーザの動きをリアルタイムにトラッキング，仮想現実に反映できる．VR専用に設計されたコントローラが付属しており，直感的な操作とジェスチャーを実現可能．
+本研究では現実感を高めるためにHTC Viveを，接触フィードバックの実装にコントローラを使用する．
+
+\begin{figure}[H]
+\centering
+\begin{tabular}{c}
+
+\begin{minipage}{0.50\hsize}
+\includegraphics*[width=7.8cm,clip]{images/technology01.eps}
+\caption{HTC Vive\cite{htc}}
+\label{fig:htc}
+\end{minipage}
+
+\begin{minipage}{0.50\hsize}
+\includegraphics*[width=7.8cm,clip]{images/technology02.eps}
+\caption{コントローラ\cite{htc}}
+\label{fig:controller}
+\end{minipage}
+
+\end{tabular}
+\end{figure} 
+
+\subsection{Maya}
+
+Mayaはオートデスク社によって開発されたハイエンド３次元コンピュータグラフィックスソフトウェアである．
+ハリウッドをはじめとした映画からゲーム，CMの制作に使用されている．映画のVFX市場で圧倒的なシェアを誇り，ゲーム市場においてもMayaと同じく３次元コンピュータグラフィックスソフトウェアである3ds Maxと50％50％であるとオートデスク社は述べている．
+本研究で使用したペット及びユーザの手のアバターはMayaを用いて作成した．
+
+\begin{figure}[H]
+\centering
+\includegraphics*[width=16cm,clip]{images/sc3.eps}
+\caption{Mayaの制作画面}
+\label{fig:maya}
+\end{figure}
+
+\subsection{Visual Studio}
+
+Visual StudioはMicrosoft社が開発した統合開発環境である．C＃，Visual Basic，Pythonといった８種類のプログラム言語に対応している．また，WindowsだけでなくiOSやLinuxなどのOSにも対応可能である．
+UnityにはMonoDevelopという統合開発環境が標準で備わっているが，Visual Studioがこのスクリプトエディタよりも高機能であることから，本研究ではVisual Studioを利用する．
