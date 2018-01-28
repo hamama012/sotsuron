@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.3}目的}{2}
 \contentsline {section}{\numberline {1.4}本論文の構成}{2}
 \contentsline {chapter}{\numberline {第2章}先行研究と利用技術}{3}
-\contentsline {section}{\numberline {2.1}概要}{3}
+\contentsline {section}{\numberline {2.1}先行研究の概要}{3}
 \contentsline {section}{\numberline {2.2}問題点}{5}
 \contentsline {section}{\numberline {2.3}利用技術}{5}
 \contentsline {subsection}{\numberline {2.3.1}Unity}{5}
@@ -15,9 +15,7 @@
 \contentsline {section}{\numberline {3.1}概要}{8}
 \contentsline {section}{\numberline {3.2}仮想空間}{10}
 \contentsline {subsection}{\numberline {3.2.1}ユーザ部}{10}
-\contentsline {subsubsection}{ユーザアバター}{10}
 \contentsline {subsection}{\numberline {3.2.2}ペット部}{11}
-\contentsline {subsubsection}{バーチャルペット}{11}
 \contentsline {subsection}{\numberline {3.2.3}環境部}{12}
 \contentsline {section}{\numberline {3.3}ユーザ管理}{13}
 \contentsline {section}{\numberline {3.4}ペット管理}{14}
