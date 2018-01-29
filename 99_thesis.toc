@@ -17,10 +17,10 @@
 \contentsline {subsection}{\numberline {3.2.1}ユーザ部}{10}
 \contentsline {subsubsection}{ユーザアバター}{10}
 \contentsline {subsection}{\numberline {3.2.2}ペット部}{11}
-\contentsline {subsubsection}{ペットアバター}{11}
+\contentsline {subsubsection}{バーチャルペット}{11}
 \contentsline {subsection}{\numberline {3.2.3}環境部}{12}
-\contentsline {section}{\numberline {3.3}ユーザ管理部}{13}
-\contentsline {section}{\numberline {3.4}ペット管理部}{14}
+\contentsline {section}{\numberline {3.3}ユーザ管理}{13}
+\contentsline {section}{\numberline {3.4}ペット管理}{14}
 \contentsline {chapter}{\numberline {第4章}実験と評価}{17}
 \contentsline {section}{\numberline {4.1}実験環境}{17}
 \contentsline {section}{\numberline {4.2}実験用バーチャルペット}{17}
